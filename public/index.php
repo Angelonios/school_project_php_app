@@ -35,6 +35,7 @@ $paths = new Config\Paths();
 // Location of the framework bootstrap file.
 $app = require rtrim($paths->systemDirectory, '/ ') . '/bootstrap.php';
 
+date_default_timezone_set('Europe/Prague');
 /*
  *---------------------------------------------------------------
  * LAUNCH THE APPLICATION

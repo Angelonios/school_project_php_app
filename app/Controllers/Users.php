@@ -1,19 +1,18 @@
 <?php namespace App\Controllers;
 
+use App\Models\UserModel;
 
 class Users extends BaseController
 {
     //making login here
     public function index()
     {
-        echo phpinfo();
         $data = [];
         helper(['form']);
         echo view('templates/header', $data);
-//        echo view('code_wall', $data);
-        //create data for code_wall
-        //change code_wall page, to display code
+        echo view('code_wall', $data);
         echo view('templates/footer', $data);
+        log_message('info', 'Loaded Users controller with index.');
     }
 
     /**
@@ -44,21 +43,39 @@ class Users extends BaseController
         if($this->request->getMethod() == 'post'){
             $rules = [
                 'nickname'          => ['label' => 'Nickname',          'rules' => 'required|alpha_numeric|min_length[3]|max_length[30]'],
-                'email'             => ['label' => 'Email address',     'rules' => 'required|min_length[6]|max_length[60]|valid_email|is_unique[users.email]'],
+                'email'             => ['label' => 'Email address',     'rules' => 'required|min_length[6]|max_length[60]|valid_email|is_unique[Users.email]'],
                 'password'          => ['label' => 'Password',          'rules' => 'required|min_length[8]|max_length[255]'],
                 'password_confirm'  => ['label' => 'Confirm password',  'rules' => 'required|matches[password]']
             ];
 
-            if(! $this->validate($rules)){
+            if(!$this->validate($rules)){
+                //validation unsuccessful
                 $data['validation'] = $this->validator;
             } else{
-
+                //validation successful
+                $model = new UserModel();
+                $newData = [
+                    'nickname'      => $this->request->getVar('nickname'),
+                    'email'         => $this->request->getVar('email'),
+                    'password'      => $this->request->getVar('password'),
+                    'created_at'    => date('Y-m-d H:m:s'),
+                    'type'          => 'user',
+                    'active'        => true
+                ];
+                try{
+                    $model->save($newData);
+                } catch (\ReflectionException $reflectionException){
+                    log_message('error', 'Reflection exception caught during registration process. Details: '.$reflectionException->getMessage());
+                }
+                $session = session();
+                $session->setFlashdata('success', 'Successful Registration');
+                return redirect()->to('/users/login');
             }
         }
 
         echo view('templates/header', $data);
-        echo view('register', $data);
-        echo view('templates/footer', $data);
+        echo view('register');
+        echo view('templates/footer');
     }
     //--------------------------------------------------------------------
 

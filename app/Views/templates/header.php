@@ -50,7 +50,7 @@
 </nav>
 
 <div class="container" style="text-align: center">
-    <div class="bg-white w3-xlarge row" style="max-width:1200px;margin:0 auto">
+    <div class="bg-white w3-xlarge row top-menu">
         <div class="col-2 w3-button w3-padding-16" onclick="w3_open()">☰</div>
         <div class="col-6 w3-center"><img class="logo" src="/assets/img/codespace_logo.png" alt="codespace logo"></div>
         <div class="col-4">
