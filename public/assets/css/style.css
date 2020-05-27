@@ -1,0 +1,12 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.logo {max-width:250px;width:100%}
+.menu_icon{max-width:35px;width:100%;max-height:35px;height:100%}
+.close_menu_icon{max-width:35px;width:100%;max-height:35px;height:100%;}
+.menu_row:hover{color:lightgray;text-decoration:#0e1113}
+.menu_link,
+.menu_link:hover,
+.menu_link:link,
+.menu_link:visited,
+.menu_link:active{text-decoration:none;cursor:pointer;text-shadow:0px 1px 0px #3d768a;font-weight:bold;padding:13px 32px;color:#0e1113}
+#mySidebar{display:none;z-index:2;width:30%;min-width:300px}
