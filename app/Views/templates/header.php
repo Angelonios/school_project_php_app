@@ -10,7 +10,7 @@
 <body class="bg-dark">
 
 <!-- Sidebar (hidden by default) -->
-<nav class="container w3-sidebar w3-card w3-top w3-xlarge w3-animate-left bg-secondary" id="mySidebar">
+<nav class="container w3-sidebar w3-card w3-top w3-xlarge w3-animate-left bg-white" id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="nav-link menu_link">
         <div class="row menu_row">
             <div class="col-3 col-sm-3 menu_icon_container"><img class="close_menu_icon" src="/close_icon.ico/"></div>
@@ -50,7 +50,7 @@
 </nav>
 
 <div class="container" style="text-align: center">
-    <div class="bg-secondary w3-xlarge row" style="max-width:1200px;margin:0 auto">
+    <div class="bg-white w3-xlarge row" style="max-width:1200px;margin:0 auto">
         <div class="col-2 w3-button w3-padding-16" onclick="w3_open()">☰</div>
         <div class="col-6 w3-center"><img class="logo" src="/assets/img/codespace_logo.png" alt="codespace logo"></div>
         <div class="col-4">
