@@ -23,7 +23,41 @@ class Users extends BaseController
         helper(['form']);
 
         if($this->request->getMethod() == 'post'){
+            $rules = [
 
+                'email'             => ['label' => 'Email address',     'rules' => 'required|min_length[6]|max_length[60]|valid_email'],
+                'password'          => ['label' => 'Password',          'rules' => 'required|min_length[8]|max_length[255]|authenticateUser[email,password]'],
+            ];
+
+            $errors = [
+                'password' => [
+                    'authenticateUser' => 'User authentication failed.'
+                ]
+            ];
+
+            if(!$this->validate($rules, $errors)){
+                //authentication unsuccessful
+                $data['validation'] = $this->validator;
+            } else{
+                //authentication successful
+                $model = new UserModel();
+//                $newData = [
+//                    'nickname'      => $this->request->getVar('nickname'),
+//                    'email'         => $this->request->getVar('email'),
+//                    'password'      => $this->request->getVar('password'),
+//                    'created_at'    => date('Y-m-d H:m:s'),
+//                    'type'          => 'user',
+//                    'active'        => true
+//                ];
+//                try{
+//                    $model->save($newData);
+//                } catch (\ReflectionException $reflectionException){
+//                    log_message('error', 'Reflection exception caught during registration process. Details: '.$reflectionException->getMessage());
+//                }
+//                $session = session();
+//                $session->setFlashdata('success', 'Successful Registration');
+//                return redirect()->to('/users/login');
+            }
         }
 
         echo view('templates/header', $data);
