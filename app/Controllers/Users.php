@@ -8,7 +8,6 @@ class Users extends BaseController
     public function index()
     {
         $data = [];
-        helper(['form']);
         echo view('templates/header', $data);
         echo view('code_wall', $data);
         echo view('templates/footer', $data);
@@ -20,11 +19,9 @@ class Users extends BaseController
      */
     public function login(){
         $data = [];
-        helper(['form']);
 
         if($this->request->getMethod() == 'post'){
             $rules = [
-
                 'email'             => ['label' => 'Email address',     'rules' => 'required|min_length[6]|max_length[60]|valid_email'],
                 'password'          => ['label' => 'Password',          'rules' => 'required|min_length[8]|max_length[255]|authenticateUser[email,password]'],
             ];
@@ -41,22 +38,9 @@ class Users extends BaseController
             } else{
                 //authentication successful
                 $model = new UserModel();
-//                $newData = [
-//                    'nickname'      => $this->request->getVar('nickname'),
-//                    'email'         => $this->request->getVar('email'),
-//                    'password'      => $this->request->getVar('password'),
-//                    'created_at'    => date('Y-m-d H:m:s'),
-//                    'type'          => 'user',
-//                    'active'        => true
-//                ];
-//                try{
-//                    $model->save($newData);
-//                } catch (\ReflectionException $reflectionException){
-//                    log_message('error', 'Reflection exception caught during registration process. Details: '.$reflectionException->getMessage());
-//                }
-//                $session = session();
-//                $session->setFlashdata('success', 'Successful Registration');
-//                return redirect()->to('/users/login');
+                $user = $model->where('email', $this->request->getVar('email'))->first();
+                $this->setUserSession($user);
+                return redirect()->to('/timeline/index');
             }
         }
 
@@ -72,7 +56,6 @@ class Users extends BaseController
      */
     public function register(){
         $data = [];
-        helper(['form']);
 
         if($this->request->getMethod() == 'post'){
             $rules = [
@@ -111,19 +94,18 @@ class Users extends BaseController
         echo view('register');
         echo view('templates/footer');
     }
+
     //--------------------------------------------------------------------
 
-    /**
-     * This function calls profile screen for given username.
-     */
-    public function profile($username){
-        $data = [];
-        helper(['form']);
-        echo view('templates/header', $data);
-        echo view('profile', $data);
-        //load profile data for given user
-        echo view('templates/footer', $data);
+    private function setUserSession($user){
+        $data = [
+            'id'            => $user['id'],
+            'nickname'      => $user['nickname'],
+            'email'         => $user['email'],
+            'type'          => $user['type'],
+            'isLoggedIn'    => true
+        ];
+
+        session()->set($data);
     }
-
-    //--------------------------------------------------------------------
 }

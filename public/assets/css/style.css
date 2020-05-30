@@ -9,5 +9,5 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .menu_link:link,
 .menu_link:visited,
 .menu_link:active{text-decoration:none;cursor:pointer;text-shadow:0 1px 0 #3d768a;font-weight:bold;padding:13px 32px;color:#0e1113}
-#mySidebar{display:none;z-index:2;width:30%;min-width:300px}
+#mySidebar{display:none;z-index:2;width:25%;min-width:300px}
 .top-menu{max-width:1200px;margin:0 auto}

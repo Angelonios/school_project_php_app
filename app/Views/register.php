@@ -4,7 +4,7 @@
             <div class="container">
                 <h3>Registration</h3>
                 <hr>
-                <form class="" action="/users/register" method="post">
+                <form action="/users/register" method="post">
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
@@ -39,11 +39,11 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-sm-4">
-                            <button type="submit" class="btn btn-primary">Register</button>
+                        <div class="col-12 col-sm-6">
+                            <button type="submit" class="btn btn-dark">Register</button>
                         </div>
-                        <div class="col-12 col-sm-8 text-right">
-                            <a href="/users/login">Already got existing account?</a>
+                        <div class="col-12 col-sm-6 text-right">
+                            <a class="btn btn-light" href="/users/login">Already got existing account?</a>
                         </div>
                     </div>
                 </form>
