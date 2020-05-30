@@ -3,7 +3,7 @@
 
     </header>
     <section class="page-section">
-        <div class="timeline">
+        <div class="timeline timeline_display">
             <div class="timeline__wrap">
                 <div class="timeline__items">
                     <?php
