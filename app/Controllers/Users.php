@@ -22,8 +22,8 @@ class Users extends BaseController
 
         if($this->request->getMethod() == 'post'){
             $rules = [
-                'email'             => ['label' => 'Email address',     'rules' => 'required|min_length[6]|max_length[60]|valid_email'],
-                'password'          => ['label' => 'Password',          'rules' => 'required|min_length[8]|max_length[255]|authenticateUser[email,password]'],
+                'email'             => ['label' => 'Email address',     'rules' => 'required|valid_email'],
+                'password'          => ['label' => 'Password',          'rules' => 'required|authenticateUser[email,password]'],
             ];
 
             $errors = [

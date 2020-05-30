@@ -8,8 +8,8 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/timeline.min.css">
 <link rel="shortcut icon" type="image/png" href="/codespace_icon.ico"/>
-<script src="js/jquery.js"></script>
-<script scr="js/timeline.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/timeline.min.js"></script>
 <body class="bg-dark">
 
 <!-- Sidebar (hidden by default) -->
@@ -22,7 +22,13 @@
     <a href="" onclick="w3_close()" class="nav-link menu_link">
         <div class="row menu_row">
             <div class="col-3 col-sm-3"><img class="menu_icon" src="/code_icon.ico/"></div>
-            <div class="col-9 col-sm-9">Browse codes</div>
+            <div class="col-9 col-sm-9">Code posts timeline</div>
+        </div>
+    </a>
+    <a href="" onclick="w3_close()" class="nav-link menu_link">
+        <div class="row menu_row">
+            <div class="col-3 col-sm-3"><img class="menu_icon" src="/user_icon.ico/"></div>
+            <div class="col-9 col-sm-9">Browse users</div>
         </div>
     </a>
     <a href="" onclick="w3_close()" class="nav-link menu_link">
@@ -51,8 +57,8 @@
     </a>
 </nav>
 
-<div class="container" style="text-align: center">
-    <div class="bg-white w3-xlarge row top-menu">
+<div class="bg-white container top_menu">
+    <div class="w3-xlarge row">
         <div class="col-2 col-sm-2 w3-button w3-padding-16" onclick="w3_open()">☰</div>
         <div class="col-10 col-sm-10 w3-center"><img class="logo" src="/assets/img/codespace_logo.png" alt="codespace logo"></div>
     </div>
