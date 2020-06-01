@@ -73,9 +73,6 @@
         <div class="col-2 col-sm-2 w3-button w3-padding-16 menu_button" >  </div>
     </div>
     <div class="row bs-popover-right bg-white">
-        <div class="col-2 col-sm-2 w3-button w3-padding-16 menu_button" onclick="w3_open()">☰</div>
-        <div class="col-8 col-sm-8 w3-center"><img class="logo" src="<?php echo base_url(); ?>/assets/img/codespace_logo.png" alt="codespace logo"></div>
-        <div class="col-2 col-sm-2 w3-button w3-padding-16 menu_button" >  </div>
     </div>
 </div>
 
