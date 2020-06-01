@@ -9,7 +9,7 @@ class Users extends BaseController
     {
         $data = [];
         echo view('templates/header', $data);
-        echo view('code_wall', $data);
+        echo view('code_post_timeline', $data);
         echo view('templates/footer', $data);
         log_message('info', 'Loaded Users controller with index.');
     }

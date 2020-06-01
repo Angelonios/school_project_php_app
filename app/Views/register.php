@@ -4,7 +4,7 @@
             <div class="container">
                 <h3>Registration</h3>
                 <hr>
-                <form action="/users/register" method="post">
+                <form action="<?php echo base_url(); ?>/users/register" method="post">
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
@@ -43,7 +43,7 @@
                             <button type="submit" class="btn btn-dark">Register</button>
                         </div>
                         <div class="col-12 col-sm-6 text-right">
-                            <a class="btn btn-light" href="/users/login">Already got existing account?</a>
+                            <a class="btn btn-light" href="<?php echo base_url(); ?>/users/login">Already got existing account?</a>
                         </div>
                     </div>
                 </form>

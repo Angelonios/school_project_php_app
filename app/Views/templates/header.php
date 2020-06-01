@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="/assets/css/style.css">
-<link rel="stylesheet" href="/assets/css/timeline.min.css">
-<link rel="shortcut icon" type="image/png" href="/codespace_icon.ico"/>
-<script type="text/javascript" src="/assets/js/jquery.js"></script>
-<script type="text/javascript" src="/assets/js/timeline.min.js"></script>
+<link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/style.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/timeline.min.css">
+<link rel="shortcut icon" type="image/png" href="<?php echo base_url(); ?>/codespace_icon.ico"/>
+<script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/timeline.min.js"></script>
 <body class="bg-dark">
 
 <!-- Sidebar (hidden by default) -->
@@ -21,37 +21,37 @@
     </a>
     <a href="" onclick="w3_close()" class="nav-link menu_link">
         <div class="row menu_row">
-            <div class="col-3 col-sm-3"><img class="menu_icon" src="/code_icon.ico/"></div>
+            <div class="col-3 col-sm-3"><img class="menu_icon" src="<?php echo base_url(); ?>/code_icon.ico/"></div>
             <div class="col-9 col-sm-9">Code posts timeline</div>
         </div>
     </a>
     <a href="" onclick="w3_close()" class="nav-link menu_link">
         <div class="row menu_row">
-            <div class="col-3 col-sm-3"><img class="menu_icon" src="/user_icon.ico/"></div>
+            <div class="col-3 col-sm-3"><img class="menu_icon" src="<?php echo base_url(); ?>/user_icon.ico/"></div>
             <div class="col-9 col-sm-9">Browse users</div>
         </div>
     </a>
     <a href="" onclick="w3_close()" class="nav-link menu_link">
         <div class="row menu_row">
-            <div class="col-3 col-sm-3"><img class="menu_icon" src="/user_icon.ico/"></div>
+            <div class="col-3 col-sm-3"><img class="menu_icon" src="<?php echo base_url(); ?>/user_icon.ico/"></div>
             <div class="col-9 col-sm-9">Browse users</div>
         </div>
     </a>
     <a href="" onclick="w3_close()" class="nav-link menu_link">
         <div class="row menu_row">
-            <div class="col-3 col-sm-3"><img class="menu_icon" src="/category_icon.ico/"></div>
+            <div class="col-3 col-sm-3"><img class="menu_icon" src="<?php echo base_url(); ?>/category_icon.ico/"></div>
             <div class="col-9 col-sm-9">Submit category</div>
         </div>
     </a>
     <a href="" onclick="w3_close()" class="nav-link menu_link">
         <div class="row menu_row">
-            <div class="col-3 col-sm-3"><img class="menu_icon" src="/post_icon.ico/"></div>
+            <div class="col-3 col-sm-3"><img class="menu_icon" src="<?php echo base_url(); ?>/post_icon.ico/"></div>
             <div class="col-9 col-sm-9">Post code</div>
         </div>
     </a>
     <a href="" onclick="w3_close()" class="nav-link menu_link">
         <div class="row menu_row">
-            <div class="col-3 col-sm-3"><img class="menu_icon" src="/about_icon.ico/"></div>
+            <div class="col-3 col-sm-3"><img class="menu_icon" src="<?php echo base_url(); ?>/about_icon.ico/"></div>
             <div class="col-9 col-sm-9">About</div>
         </div>
     </a>
@@ -59,8 +59,8 @@
 
 <div class="bg-white container top_menu">
     <div class="w3-xlarge row">
-        <div class="col-2 col-sm-2 w3-button w3-padding-16" onclick="w3_open()">☰</div>
-        <div class="col-10 col-sm-10 w3-center"><img class="logo" src="/assets/img/codespace_logo.png" alt="codespace logo"></div>
+        <div class="col-2 col-sm-2 w3-button w3-padding-16 menu_button" onclick="w3_open()">☰</div>
+        <div class="col-10 col-sm-10 w3-center"><img class="logo" src="<?php echo base_url(); ?>/assets/img/codespace_logo.png" alt="codespace logo"></div>
     </div>
 </div>
 

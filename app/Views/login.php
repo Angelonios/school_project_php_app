@@ -9,7 +9,7 @@
                         <?= session()->get('success') ?>
                     </div>
                 <?php endif; ?>
-                <form action="/users/login" method="post">
+                <form action="<?php echo base_url(); ?>/users/login" method="post">
                     <div class="form-group">
                         <label for="email">Email address</label>
                         <input type="text" class="form-control" name="email" id="email" value="<?= set_value('email') ?>">
@@ -25,7 +25,7 @@
                             <button type="submit" class="btn btn-dark">Login</button>
                         </div>
                         <div class="col-12 col-sm-6 text-right">
-                            <a class="btn btn-light" href="/users/register">Don't have an account yet?</a>
+                            <a class="btn btn-light" href="<?php echo base_url(); ?>/users/register">Don't have an account yet?</a>
                         </div>
                     </div>
                 </form>
