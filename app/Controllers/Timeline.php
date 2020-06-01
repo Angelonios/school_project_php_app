@@ -12,4 +12,13 @@ class Timeline extends BaseController
         echo view('templates/footer', $data);
         log_message('info', 'Loaded Timeline controller with index.');
     }
+
+    public function code_post(){
+        $data = [];
+
+        echo view('templates/header', $data);
+        echo view('create_post', $data);
+        echo view('templates/footer', $data);
+        log_message('info', 'Loaded Timeline controller with index.');
+    }
 }

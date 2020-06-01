@@ -13,3 +13,5 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .top_menu{max-width:1200px;margin:0 auto;border-radius:0 0 10px 10px}
 .page-section{max-width:1200px;text-align:center; margin: 0 auto;}
 .menu_button{border-radius:0 0 0 10px}
+.code_form{border-radius:10px 10px 10px 10px;max-width:1200px;width:100%;margin: 0 auto;}
+#editor{resize:vertical;overflow:auto!important;}
