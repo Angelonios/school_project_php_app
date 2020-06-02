@@ -21,11 +21,11 @@
                         <?php echo (isset($validation) && $validation->hasError('password')) ? '<div class="text-center"><label class="alert-danger alert p-0">'.$validation->getError('password').'</label></div>' : ''; ?>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-sm-6">
-                            <button type="submit" class="btn btn-dark">Login</button>
+                        <div class="col-12 col-sm-4">
+                            <button type="submit" class="btn btn-dark w-100">Login</button>
                         </div>
-                        <div class="col-12 col-sm-6 text-right">
-                            <a class="btn btn-light" href="<?php echo base_url(); ?>/users/register">Don't have an account yet?</a>
+                        <div class="col-12 col-sm-8 text-right">
+                            <a class="btn btn-light w-100" href="<?php echo base_url(); ?>/users/register">Don't have an account yet?</a>
                         </div>
                     </div>
                 </form>

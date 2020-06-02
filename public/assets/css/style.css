@@ -1,7 +1,7 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-bar-block .w3-bar-item {padding:20px}
 .logo{max-width:195px;width:100%;}
-.menu_icon{max-width:35px;width:100%;max-height:35px;height:100%}
+.menu_icon{max-width:25px;width:100%;max-height:25px;height:100%}
 .close_menu_icon{max-width:35px;width:100%;max-height:35px;height:100%;}
 .menu_row:hover{color:lightgray;text-decoration:#0e1113}
 .menu_link,
@@ -9,8 +9,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .menu_link:link,
 .menu_link:visited,
 .menu_link:active{text-decoration:none;cursor:pointer;text-shadow:0 1px 0 #3d768a;font-weight:bold;padding:13px 32px;color:#0e1113}
-#mySidebar{display:none;z-index:4;width:25%;min-width:300px}
-.top_menu{max-width:1200px;margin:0 auto;border-radius:0 0 10px 10px}
+#mySidebar{display:none;z-index:5;width:25%;min-width:300px}
+.top_menu{max-width:1200px;margin:0 auto;border-radius:0 0 10px 10px;}
+.sub_top_menu{max-width:1000px;margin:0 auto;border-radius:0 0 10px 10px;background-color:#c2c2c2}
 .page-section{max-width:1200px;text-align:center; margin: 0 auto;}
 .menu_button{border-radius:0 0 0 10px}
 .code_form{border-radius:10px 10px 10px 10px;max-width:1200px;width:100%;margin: 0 auto;}

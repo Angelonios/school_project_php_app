@@ -10,7 +10,7 @@
                             <h4>Code</h4>
                             <div class="form-group" data-toggle="tooltip" data-placement="right"
                                  title="Format your code to get better rating!">
-                                <textarea class="form-control" id="editor" name="editor" required></textarea>
+                                <textarea class="form-control" id="editor" name="editor" required><?= set_value('editor') ?></textarea>
                             </div>
                         </div>
                     </div>
@@ -19,7 +19,7 @@
                             <h4>Description</h4>
                             <div>
                                 <textarea class="form-control" id="description" name="description" rows="3" required
-                                          placeholder="Describe briefly code above.&#10;For example describe a task and how the code fulfills it."></textarea>
+                                          placeholder="Describe briefly code above.&#10;For example describe a task and how the code fulfills it."><?= set_value('description') ?></textarea>
                             </div>
                         </div>
                     </div>

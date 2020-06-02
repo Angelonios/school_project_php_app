@@ -95,6 +95,12 @@ class Users extends BaseController
         echo view('templates/footer');
     }
 
+    public function logout(){
+        $data = [];
+        session()->destroy();
+        $this->login();
+    }
+
     //--------------------------------------------------------------------
 
     private function setUserSession($user){
@@ -107,5 +113,6 @@ class Users extends BaseController
         ];
 
         session()->set($data);
+        return true;
     }
 }
