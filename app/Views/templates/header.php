@@ -38,7 +38,7 @@
             <div class="col-9 col-sm-9">Code posts</div>
         </div>
     </a>
-    <?php if (session()->get('isLoggedIn'))
+    <?php if (session()->get('login'))
     {
         echo (session()->get('type') !== 'admin') ?
         '<a href="'.base_url().'/timeline/users" onclick="w3_close()" class="nav-link menu_link">
@@ -131,6 +131,7 @@
                                                    alt="codespace logo"></div>
         <div class="col-2 col-sm-2 w3-padding-16"></div>
     </div>
+
     <div class="w3-xlarge row sub_top_menu no-gutters">
         <div class="col-lg-4"></div>
         <div class="col-md-auto col-lg-4">

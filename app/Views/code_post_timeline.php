@@ -11,16 +11,16 @@
                     $var_comments = "10 comments";
                     $var_desc = "mycode";
                     $var_category = "noob";
-                    for($i = 0; $i < 100; $i++)
+                    for($i = 0; $i < 5; $i++)
                     {
                     echo
                     '<div class="timeline__item">
-                        <div class="timeline__content">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-2 col-sm-2">
-                                        <div class="left_post_part container">
-                                            <div class="row">
+                        <div class="timeline__content container no-gutters border">
+                            <!--<div class="container border">-->
+                                <div class="row border">
+                                    <div class="col-2 col-sm-2 border">
+                                        <div class="left_post_part container border">
+                                            <div class="row border">
                                                 <div class="rating_number col-12 col-sm-12">'.$var_likes.'</div>
                                             </div>
                                             <div class="commnet_number row">
@@ -43,7 +43,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                        <!--</div> -->
                         </div>
                     </div>';
                     }

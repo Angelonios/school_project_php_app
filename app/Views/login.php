@@ -28,6 +28,11 @@
                             <a class="btn btn-light w-100" href="<?php echo base_url(); ?>/users/register">Don't have an account yet?</a>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-8 text-right">
+                            <a class="btn btn-light w-100" href="<?php echo $facebook_login_url ?>">Login with Facebook</a>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
